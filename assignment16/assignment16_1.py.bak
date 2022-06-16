@@ -1,0 +1,43 @@
+#1. Accept N numbers from user and return difference between summation
+#of even elements and summation of odd elements.
+#Input : N : 6
+#Elements : 85 66 3 80 93 88
+#Output : 53 (234 - 181)
+
+def even(a):
+    sum = 0
+    for i in range(len(a)):
+        if(a[i]%2)==0:
+            sum = sum +a[i]
+    return sum
+    
+    
+def odd(a):
+    sum = 0
+    for i in range(len(a)):
+        if(a[i]%2)!=0:
+            sum = sum +a[i]
+    return sum
+            
+def diff(ls):
+    even = 0
+    odd = 0
+    for i in (ls):
+        if(i%2 == 0):
+            even += i
+        else:
+            odd += i
+    return (even-odd)
+
+
+from math import *
+from array import *
+def main():
+    a=array('i',[])
+    n=int(input("Enter a number of arrays elements:"))
+    for i in range(n):
+        a.append(int(input("Enter a element:")))
+
+    print(even(a)-odd(a))
+
+main()

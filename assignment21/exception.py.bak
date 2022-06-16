@@ -1,0 +1,14 @@
+a=10
+b=0
+try:    
+    d=a/b
+    print(d)
+    print("inside try")
+
+except ZeroDivisionError:
+        print("divison by zero not allowed")
+else:
+    ("inside else")
+print("rest of the code")
+
+        
